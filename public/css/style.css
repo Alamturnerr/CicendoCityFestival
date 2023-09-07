@@ -1,0 +1,317 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Inter:wght@300;400;500;600;700&family=Poppins&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ff9c5b;
+    margin: 0;
+    padding: 0;
+    /* background-image: url('/images/bg.jpeg');  /* Ganti dengan path gambar yang sesuai */
+    background-size: cover; /* Menutupi seluruh halaman */
+    background-repeat: no-repeat; /* Tidak diulang */
+}
+
+/* Desktop view */
+.navbar {
+    background-color: #3b8183;
+    padding: 0;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 12pt;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 400;
+    color: #000;
+}
+
+.contact-us {
+    font-weight: 400;
+}
+
+/* Mobile view - tambahkan CSS ini untuk layar berukuran lebih kecil */
+@media (max-width: 768px) {
+    .navbar {
+        padding-bottom: 10px; /* Tambahkan padding-bottom di sini */
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 8px 0;
+        font-size: 14px;
+    }
+
+    .navbar-toggler {
+        margin-top: 8px;
+        padding: 10px 15px;
+        margin-right: 10px;
+    }
+}
+
+.footer {
+    background-color: #3b8183;
+}
+
+.footer li{
+    color: #000;
+}
+
+.footer p{
+    color: #000;
+}
+
+.footer a{
+    color: #000;
+}
+
+.footer-icon {
+    font-size: 24px;
+}
+
+.footer h6{
+    color: black;
+}
+
+/* Gaya untuk header 
+header {
+    background-color: #fad088;
+    padding: 0px 0;
+    text-align: center;
+    color: white;
+    font-weight:700;
+    font-size: 12pt;
+}
+
+.navbar {
+    color: white;
+    font-weight: 400;
+    font-size: 12pt;
+    height: 50px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 400;
+    color: #000;
+}
+
+.contact-us {
+    font-weight: 400;
+}
+
+.footer {
+    background-color: #fad088;
+}
+
+.footer li{
+    color: #000;
+}
+
+.footer p{
+    color: #000;
+}
+
+.footer a{
+    color: #000;
+}
+
+.footer-icon {
+        font-size: 24px;
+    }
+.footer h6{
+    color: black;
+} */
+
+.carousel {
+    margin: 0;
+    padding: 0;
+}
+
+.marquee {
+    background-image: url("background_marquee2.jpg");
+    height: auto;
+    width: auto;
+}
+
+.text-marquee-container {
+    display: flex;
+    height: 110px;
+    align-items: center;
+    display: inline-block;
+    overflow: hidden;
+    font-size: 50px;
+    position: relative;
+}
+
+.text-marquee {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    display: inline-block;
+    font-size: 50px;
+    padding: 12px;
+}
+
+.marquee-dots {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    width: 20px; /* Adjust the size of the dot image */
+    height: 20px; /* Adjust the size of the dot image */
+    background-image: url('images/DOTS.png');
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0 7px;
+    animation: dots-animation 1s ease-in-out infinite alternate;
+}
+
+.text-marquee span {
+    padding-right: 15px;
+}
+
+.venue-details {
+    text-align: center;
+    padding: 30px;
+    background-color: #F7E987;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 80%;
+}
+@media (max-width: 768px) { /* Ubah nilai sesuai dengan lebar tampilan responsif */
+    .venue-content {
+        flex-direction: column; /* Tumpukan vertikal pada tampilan responsif */
+    }
+}
+/* style.css */
+.lineup-section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.bouncing-image {
+    animation: bounce 2s infinite;
+}
+
+
+.lineup-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.lineup-item {
+    text-align: center;
+}
+
+.lineup-item img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.performer-name {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    max-width: 80%;
+}
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+ }
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.countdown-number {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.countdown-label {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+
+
+/* Gaya untuk main content dan footer */
+.img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.line{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.image{
+    object-fit: cover;
+}
+
+@media (max-width: 767px) {
+    .image-mobile {
+        height: 570.91px;
+        max-width: 100%;
+    }
+}
+
+/* Tambahkan aturan gaya lainnya sesuai kebutuhan */
+
+.text-center {
+    font-family: PimpitReguler;
+}
+
